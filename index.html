@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f7f1e8">
+
+  <title>Erika Dains Tambo | BSIT Student, Web Developer, Virtual Assistant</title>
+  <meta name="description" content="Portfolio of Erika Dains Tambo, a BSIT student at STI College Fairview offering web design, graphic design, video editing and virtual assistance.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" crossorigin="anonymous" integrity="sha384-gIkQt4WcI4X14+Hn7+8FKYbBIDh47i0gI5+xvzKXdqVn3naaYN/hceWLKAJrg4zoS">
+
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" href="ED.png" type="image/png">
+
+</head>
+
+<body>
+
+  <nav class="navbar">
+  <a href="#home" class="logo">EDST</a>
+  <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links"><i class="bi bi-list"></i></button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li>
+      <a href="#about">About</a>
+      <ul class="dropdown">
+        <li><a href="#career-title">Career Objectives</a></li>
+        <li><a href="#education">Educational Background</a></li>
+      </ul>
+    </li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#certificates">Certificates</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+
+  <section id="home"class="hero">
+
+    <h1 class="bg-text">ERIKA TAMBO</h1>
+
+    <div class="content">
+
+      <h2>Hello, I'm Erika</h2>
+
+      <p>
+        BSIT Student • Aspiring Web Developer • Virtual Assistant
+     </p>
+
+      <a href="#about" class="btn">About Me</a>
+
+    </div>
+
+
+    <div class="image-box">
+
+      <img src="pic1.png" alt="Erika">
+
+    </div>
+
+  </section>
+
+  <section id="about" class="about">
+
+    <div class="about-content">
+
+        <div class="about-text">
+
+            <h2>About Me</h2>
+
+            <p>
+                 Hello! I'm Erika Tambo, currently pursuing a Bachelor of Science in Information Technology (BSIT) at STI College Fairview. I am passionate about web development, UI/UX design, and creating modern digital experiences.
+            </p>
+
+            <p>
+                As a dedicated and eager learner, I approach every task with a hands-on attitude, emphasizing responsibility, adaptability, and strong organizational skills. I enjoy learning new technologies, building responsive websites, and continuously improving my skills in programming and design to create meaningful digital solutions.
+            </p>
+            
+            <h3 id="career-title" class="career-title">Career Objective</h3>
+
+           <p class="career-text"> 
+           My goal is to become a skilled Web Developer and UI/UX Designer, creating innovative, responsive, and user-friendly digital solutions. I aspire to continuously improve my technical skills, gain valuable industry experience, and contribute to projects that make a positive impact through technology.
+           </p>
+        </div>
+
+        <div class="id-card-container">
+
+            <div class="lanyard"></div>
+
+            <div class="id-card">
+
+                <img src="pic2.jpg" alt="Erika">
+
+                <h3>TAMBO</h3>
+                <h4>ERIKA DAINS SIA.</h4>
+
+                <p>BSIT Student</p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div id="education" class="education">
+
+    <h2>Educational Background</h2>
+
+    <div class="timeline">
+
+    <div class="timeline-item">
+        <div class="circle"></div>
+        <h3>APEC School</h3>
+        <h4>High School</h4>
+        <p>July 2016 - June 2020</p>
+    </div>
+
+    <div class="timeline-item">
+        <div class="circle"></div>
+        <h3>Eclaro Academy</h3>
+        <h4>Senior High School</h4>
+        <p>August 2020 - June 2022</p>
+    </div>
+
+    <div class="timeline-item">
+        <div class="circle"></div>
+        <h3>AMA University</h3>
+        <h4>Industrial Engineering</h4>
+        <p>August 2022 - December 2022</p>
+    </div>
+
+    <div class="timeline-item">
+        <div class="circle"></div>
+        <h3>STI College</h3>
+        <h4>Information Technology</h4>
+        <p>September 2023 - Present</p>
+    </div>
+   </div>
+  </div>
+
+  </section>
+
+    <section id="projects" class="projects">
+
+    <h2 class="section-title">Projects</h2>
+
+    <div class="project-gallery">
+
+        <button type="button" class="project-card" onclick="openCategory('web')">
+
+            <img loading="lazy" decoding="async" src="2022.png" alt="Web Design">
+
+            <h3>🌐 Web Design</h3>
+
+            <p>
+                Showcasing website designs and frontend development projects.
+            </p>
+
+        </button>
+
+        <button type="button" class="project-card" onclick="openCategory('graphic')">
+
+            <img loading="lazy" decoding="async" src="2.jpg" alt="Graphic Design">
+
+            <h3>🎨 Graphic Design</h3>
+
+            <p>
+                A collection of logo designs and creative branding projects.
+            </p>
+
+        </button>
+
+        <button type="button" class="project-card" onclick="openCategory('video')">
+
+            <img loading="lazy" decoding="async" src="1st.jpg" alt="Video Editing">
+
+            <h3>🎬 Video Editing</h3>
+
+            <p>
+                Edited videos demonstrating creativity and storytelling.
+            </p>
+
+        </button>
+        
+    </div> 
+
+        <div class="portfolio-button-container">
+
+            <a href="https://erika-dainstambo.my.canva.site/project-portfolio-showcase"
+           target="_blank" rel="noopener"
+           class="portfolio-btn">
+
+            <i class="bi bi-folder2-open"></i>
+            Sample Portfolio Showcase
+
+         </a>
+
+        </div>
+
+        <div id="projectModal" class="project-modal" role="dialog" aria-modal="true" aria-label="Project details">
+
+         <div class="modal-content">
+
+            <button type="button" class="close-btn" aria-label="Close">&times;</button>
+
+            <div id="modalBody"></div>
+
+        </div>
+
+</div>
+
+
+</section>
+
+
+
+<section id="skills" class="skills">
+
+    <h2>Skills</h2>
+
+    <div class="skills-container">
+
+        <div class="skills-box">
+
+            <h3>Technical Skills</h3>
+
+            <ul>
+                <li>Basic Computer Literacy</li>
+                <li>Web Development</li>
+                <li>Web Design</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Simple Video Editing</li>
+            </ul>
+
+        </div>
+
+        <div class="skills-box">
+
+            <h3>Non-Technical Skills</h3>
+
+            <ul>
+                <li>Professionalism</li>
+                <li>Time Management</li>
+                <li>Communication Skills</li>
+                <li>Problem Solving</li>
+                <li>Teamwork</li>
+                <li>Adaptability</li>
+                <li>Good Telephone Etiquette</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="certificates" class="certificates">
+
+    <h2>Certificates</h2>
+
+    <div class="certificate-gallery">
+        <div class="certificate-card" tabindex="0" role="button" aria-label="View Basics of Finance certificate">
+            <img loading="lazy" decoding="async" src="BF.jpg" alt="Basics of Finance certificate">
+            <h3>Basics of Finance</h3>
+            <p class="cert-meta">HP LIFE, July 2026</p>
+        </div>
+
+        <div class="certificate-card" tabindex="0" role="button" aria-label="View Cash Flow certificate">
+            <img loading="lazy" decoding="async" src="Cash_Flow.jpg" alt="Cash Flow certificate">
+            <h3>Cash Flow</h3>
+            <p class="cert-meta">HP LIFE, July 2026</p>
+        </div>
+
+        <div class="certificate-card" tabindex="0" role="button" aria-label="View Profit and Loss certificate">
+            <img loading="lazy" decoding="async" src="Profit_and_Loss.jpg" alt="Profit and Loss certificate">
+            <h3>Profit and Loss</h3>
+            <p class="cert-meta">HP LIFE, July 2026</p>
+        </div>
+
+        <div class="certificate-card" tabindex="0" role="button" aria-label="View Finding Funding certificate">
+            <img loading="lazy" decoding="async" src="Finding_Funding.jpg" alt="Finding Funding certificate">
+            <h3>Finding Funding</h3>
+            <p class="cert-meta">HP LIFE, July 2026</p>
+        </div>
+
+        <div class="certificate-card" tabindex="0" role="button" aria-label="View Java Fundamentals certificate">
+            <img loading="lazy" decoding="async" src="java_fundamental.jpg" alt="Java Fundamentals certificate">
+            <h3>Java Fundamentals</h3>
+            <p class="cert-meta">Oracle Academy, June 2024</p>
+        </div>
+
+        <div class="certificate-card" tabindex="0" role="button" aria-label="View Introduction to Modern AI certificate">
+            <img loading="lazy" decoding="async" src="Introduction_to_Modern_AI.jpg" alt="Introduction to Modern AI certificate">
+            <h3>Introduction to Modern AI</h3>
+            <p class="cert-meta">Cisco Networking Academy, June 2026</p>
+        </div>
+
+        <div class="certificate-card" tabindex="0" role="button" aria-label="View Introduction to Data Science certificate">
+            <img loading="lazy" decoding="async" src="Introduction_to_Data_Science.jpg" alt="Introduction to Data Science certificate">
+            <h3>Introduction to Data Science</h3>
+            <p class="cert-meta">Cisco Networking Academy, June 2026</p>
+        </div>
+    </div>
+
+
+    <div id="certificateModal" class="certificate-modal" role="dialog" aria-modal="true" aria-label="Certificate preview">
+        <button type="button" class="certificate-close" aria-label="Close">&times;</button>
+        <img id="certificatePreview" class="certificate-preview" alt="">
+    </div>
+
+</section>
+
+<section id="services" class="services">
+
+    <h2>Services</h2>
+
+    <p class="services-text">
+        I offer a variety of digital and creative services that combine technology, design, and communication skills.
+    </p>
+
+    <div class="services-container">
+
+        <div class="service-card">
+            <i class="bi bi-laptop"></i>
+            <h3>Web Design</h3>
+            <p>Creating responsive and user-friendly website designs.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="bi bi-palette"></i>
+            <h3>Graphic Design</h3>
+            <p>Designing logos, branding materials, and visual content.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="bi bi-camera-video"></i>
+            <h3>Video Editing</h3>
+            <p>Editing videos with transitions, effects, and engaging visuals.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="bi bi-briefcase"></i>
+            <h3>Virtual Assistance</h3>
+            <p>Providing administrative support, organization, and productivity assistance.</p>
+        </div>
+
+        <div class="service-card">
+            <i class="bi bi-translate"></i>
+            <h3>English Tutoring</h3>
+            <p>Helping learners improve communication and language skills.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contact" class="contact">
+
+    <h2>Contact Me</h2>
+
+    <p class="contact-text">
+        Feel free to reach out to me through the following platforms.
+    </p>
+
+    <div class="contact-container">
+
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=tambo.erikadains@gmail.com&su=Meeting%20Request&body=Dear%20Erika%2C%0A%0AI%20hope%20this%20message%20finds%20you%20well.%20I%20came%20across%20your%20portfolio%20and%20would%20like%20to%20schedule%20a%20meeting%20to%20discuss%20a%20possible%20collaboration.%0A%0APlease%20let%20me%20know%20your%20availability%2C%20and%20I%20will%20be%20happy%20to%20work%20around%20your%20schedule.%0A%0AThank%20you%2C%20and%20I%20look%20forward%20to%20hearing%20from%20you.%0A%0ABest%20regards%2C%0A%5BYour%20Name%5D" target="_blank" rel="noopener" class="contact-card">
+          <i class="bi bi-envelope-fill"></i>
+          <h3>Email</h3>
+          <span>tambo.erikadains@gmail.com</span>
+        </a>
+
+        <a href="https://github.com/tamboerikasia-hub" target="_blank" rel="noopener" class="contact-card">
+            <i class="bi bi-github"></i>
+            <h3>GitHub</h3>
+            <span>github.com/tamboerikasia-hub</span>
+        </a>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    <p>Designed & Developed by Erika Dains Sia Tambo © 2026</p>
+
+</footer>
+
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
