@@ -12,12 +12,6 @@ const projects = {
         tags: ['HTML5', 'CSS3', 'Responsive Design']
       },
       {
-        src: '2023.png',
-        title: 'Tic Tac Toe Quiz Game',
-        desc: 'Neon-themed game built with JavaScript. Supports custom question banks, sound toggle, and 2-player mode.',
-        tags: ['JavaScript', 'Web Audio API', 'Game Logic']
-      },
-      {
         src: '2024.png',
         title: 'Park Wise Parking System',
         desc: 'Web portal for locating, reserving, and monitoring parking spots with animated UI feedback.',
