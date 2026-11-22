@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>🌟 KiddieLearn: Little Minds. Big Adventures!</title>
+  <meta name="description" content="KiddieLearn - Wholesome, safe educational gaming platform for children ages 2 to 7.">
+
+  <!-- Google Fonts: Titan One + Fredoka -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700;800&family=Titan+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="app-screen-frame">
+    <!-- Atmospheric Clouds Layer -->
+    <div class="bg-clouds">
+      <div class="cloud c1"></div>
+      <div class="cloud c2"></div>
+    </div>
+
+    <!-- App Header -->
+    <header class="app-header">
+      <button class="header-btn" id="homeHeaderBtn" aria-label="Home">
+        <i class="bi bi-house-door-fill"></i>
+      </button>
+
+      <div class="brand-badge">
+        <span class="brand-rainbow-icon">🌈</span>
+        <div class="brand-text">Kiddie<span>Learn</span></div>
+      </div>
+
+      <button class="header-btn" id="parentGateBtn" aria-label="Parent Portal">
+        <i class="bi bi-person-fill"></i>
+      </button>
+    </header>
+
+    <!-- ========================================================
+         SCREEN 1: WELCOME & START PLAYING
+         ======================================================== -->
+    <main id="welcomeScreen" class="screen-view welcome-view active">
+      <div class="hero-tagline">
+        <h1>Little minds.<br><span>Big adventures!</span></h1>
+      </div>
+
+      <button class="btn-jelly-orange" id="startPlayingBtn">
+        START PLAYING <i class="bi bi-play-fill btn-arrow-icon"></i>
+      </button>
+
+      <div class="storybook-scene">
+        <div class="scene-hill"></div>
+        <div class="scene-characters">
+          <div class="char-badge delay-1" title="Giraffe">🦒</div>
+          <div class="char-badge" title="Explorer Boy">👦</div>
+          <div class="char-badge delay-2" title="Playful Puppy">🐶</div>
+          <div class="char-badge delay-3" title="Explorer Girl">👧</div>
+          <div class="char-badge delay-1" title="Elephant">🐘</div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ========================================================
+         SCREEN 2: MASCOT GREETING (LITTLE EXPLORER)
+         ======================================================== -->
+    <section id="greetingScreen" class="screen-view greeting-view">
+      <div class="star-mascot-wrapper">
+        <div class="sunbeam-sparkle">✨</div>
+        <div class="star-mascot-badge">⭐</div>
+      </div>
+
+      <div class="fluffy-cloud-dialogue">
+        <h2>Hi, little explorer!</h2>
+        <p>Ready to learn and play?</p>
+      </div>
+
+      <button class="btn-jelly-orange" id="letsGoBtn">
+        LET'S GO! <i class="bi bi-arrow-right-short btn-arrow-icon"></i>
+      </button>
+    </section>
+
+    <!-- ========================================================
+         SCREEN 3: GAME MENU & ACTIVITY CATALOG
+         ======================================================== -->
+    <section id="menuScreen" class="screen-view menu-view">
+      <div class="wooden-sign-header">
+        <h2>Choose a Game!</h2>
+      </div>
+
+      <div class="games-arcade-grid">
+        <!-- 1. Monster Math Crunch -->
+        <article class="game-arcade-card card-math" data-game="math">
+          <div class="card-icon-frame">👾</div>
+          <h3>Monster Math Crunch</h3>
+          <span class="lock-tag"><i class="bi bi-lock-fill"></i> Preview</span>
+        </article>
+
+        <!-- 2. Word Wizard -->
+        <article class="game-arcade-card card-spelling" data-game="spelling">
+          <div class="card-icon-frame">🧙‍♂️</div>
+          <h3>Word Wizard</h3>
+          <span class="lock-tag"><i class="bi bi-lock-fill"></i> Preview</span>
+        </article>
+
+        <!-- 3. Animal Memory Match -->
+        <article class="game-arcade-card card-memory" data-game="memory">
+          <div class="card-icon-frame">🦁</div>
+          <h3>Animal Memory Match</h3>
+          <span class="lock-tag"><i class="bi bi-lock-fill"></i> Preview</span>
+        </article>
+
+        <!-- 4. Color & Shape Safari -->
+        <article class="game-arcade-card card-shapes" data-game="shapes">
+          <div class="card-icon-frame">🎨</div>
+          <h3>Color & Shape Safari</h3>
+          <span class="lock-tag"><i class="bi bi-lock-fill"></i> Preview</span>
+        </article>
+
+        <!-- 5. Puzzle Paradise -->
+        <article class="game-arcade-card card-puzzles" data-game="puzzles">
+          <div class="card-icon-frame">🧩</div>
+          <h3>Puzzle Paradise</h3>
+          <span class="lock-tag"><i class="bi bi-lock-fill"></i> Preview</span>
+        </article>
+
+        <!-- 6. ABC Adventure -->
+        <article class="game-arcade-card card-abc" data-game="abc">
+          <div class="card-icon-frame">📖</div>
+          <h3>ABC Adventure</h3>
+          <span class="lock-tag"><i class="bi bi-lock-fill"></i> Preview</span>
+        </article>
+      </div>
+
+      <!-- Parent Entitlement Promo Banner -->
+      <div class="parent-access-card">
+        <div class="access-info">
+          <h4>Unlock All Games</h4>
+          <p>₱30 One-Time Family Access</p>
+        </div>
+        <button class="btn-unlock-pill" id="unlockFamilyBtn">
+          Unlock Access
+        </button>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Parent Gate Math Challenge Modal -->
+  <div class="modal-overlay" id="parentGateModal">
+    <div class="parent-gate-card">
+      <div class="gate-badge">🛡️</div>
+      <h3>Grown-Ups Only!</h3>
+      <p>Please solve this simple math question to access Parent Settings &amp; Payment.</p>
+      
+      <div class="math-challenge-box" id="gateEquation">
+        4 × 3 = ?
+      </div>
+
+      <input type="number" class="gate-input" id="gateAnswerInput" placeholder="Enter answer..." autocomplete="off">
+      
+      <div class="gate-actions">
+        <button class="btn-gate-cancel" id="gateCancelBtn">Cancel</button>
+        <button class="btn-gate-verify" id="gateVerifyBtn">Verify</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Game Preview & Demo Modal -->
+  <div class="modal-overlay" id="previewModal">
+    <div class="parent-gate-card">
+      <div class="gate-badge" id="previewIcon">🎮</div>
+      <h3 id="previewTitle">Activity Preview</h3>
+      <p id="previewDesc">Wholesome educational activity designed for children ages 2–7.</p>
+      
+      <div style="background:#e0f2fe; padding:15px; border-radius:18px; margin-bottom:16px;">
+        <span style="font-weight:800; color:#0369a1; font-size:0.95rem;">
+          ⭐ Teaser Mode Available!
+        </span>
+        <p style="font-size:0.85rem; color:#0284c7; margin-top:4px;">
+          Interactive gameplay is protected under the ₱30 Family Entitlement.
+        </p>
+      </div>
+
+      <div class="gate-actions">
+        <button class="btn-gate-cancel" id="closePreviewBtn">Close</button>
+        <button class="btn-gate-verify" id="previewUnlockBtn" style="background:#fb8500; box-shadow:0 4px 0 #b35600;">
+          Unlock (₱30)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
