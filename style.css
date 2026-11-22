@@ -125,6 +125,7 @@ p  { color: var(--brown-m); line-height: 1.75; }
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--sand);
   z-index: 900;
+  overflow: visible; /* allow mobile dropdown to escape nav height */
 }
 
 .nav-inner {
@@ -567,28 +568,66 @@ p  { color: var(--brown-m); line-height: 1.75; }
    RESPONSIVE
    ============================================= */
 @media (max-width: 900px) {
-  /* Nav */
+  /* Burger button */
   .nav-burger { display: flex; }
+
+  /* Dropdown panel */
   .nav-menu {
-    position: absolute;
+    position: fixed;        /* fixed so it clears the nav container */
     top: var(--nav-h);
     left: 0; right: 0;
-    background: rgba(255,251,247,.97);
-    backdrop-filter: blur(16px);
+    background: var(--cream);
+    border-bottom: 2px solid var(--sand);
+    box-shadow: 0 12px 32px rgba(59,27,14,.12);
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 0;
-    padding: 1rem 1.5rem 1.5rem;
-    border-bottom: 1px solid var(--sand);
-    transform: translateY(-8px);
+    padding: .5rem 0 1rem;
+    z-index: 850;
+    /* hidden state */
+    transform: translateY(-6px);
     opacity: 0;
     pointer-events: none;
-    transition: transform .25s, opacity .25s;
+    transition: transform .25s ease, opacity .2s ease;
   }
-  .nav-menu.open { transform: translateY(0); opacity: 1; pointer-events: all; }
-  .nav-menu li   { width: 100%; }
-  .nav-menu a    { display: block; padding: .7rem 0; border-bottom: 1px solid var(--sand); }
-  .nav-menu li:last-child a { border-bottom: none; margin-top: .5rem; }
+  .nav-menu.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  /* Each menu item */
+  .nav-menu li { width: 100%; }
+  .nav-menu a {
+    display: flex;
+    align-items: center;
+    padding: .85rem 1.5rem;
+    border-bottom: 1px solid var(--warm);
+    font-size: 1rem;
+  }
+  .nav-menu a::after { display: none; } /* remove underline indicator on mobile */
+  .nav-menu li:last-child a { border-bottom: none; }
+
+  /* Resume CTA pill */
+  .nav-cta {
+    margin: .75rem 1.5rem 0;
+    justify-content: center;
+    padding: .75rem 1rem !important;
+    font-size: .95rem !important;
+    border-radius: var(--radius-s) !important;
+  }
+
+  /* Full-screen dim backdrop behind the menu */
+  .nav-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(59,27,14,.35);
+    z-index: 800;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease;
+  }
+  .nav-backdrop.show { opacity: 1; pointer-events: all; }
 
   /* Hero */
   .hero {

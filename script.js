@@ -166,27 +166,47 @@ certModal.addEventListener('click', e => { if (e.target === certModal) closeCert
    ESCAPE KEY — close any open modal
    ============================================= */
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') { closeProject(); closeCert(); }
+  if (e.key === 'Escape') { closeProject(); closeCert(); closeNav(); }
 });
 
 /* =============================================
-   MOBILE NAV
+   MOBILE NAV — burger, backdrop, outside-click
    ============================================= */
-const navBurger = document.getElementById('navBurger');
-const navMenu   = document.getElementById('navMenu');
+const navBurger   = document.getElementById('navBurger');
+const navMenu     = document.getElementById('navMenu');
+const navBackdrop = document.getElementById('navBackdrop');
+
+function openNav() {
+  navMenu.classList.add('open');
+  navBurger.classList.add('open');
+  navBurger.setAttribute('aria-expanded', 'true');
+  navBurger.setAttribute('aria-label', 'Close menu');
+  navBackdrop.classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeNav() {
+  navMenu.classList.remove('open');
+  navBurger.classList.remove('open');
+  navBurger.setAttribute('aria-expanded', 'false');
+  navBurger.setAttribute('aria-label', 'Open menu');
+  navBackdrop.classList.remove('show');
+  // only restore scroll if no modal is open
+  if (projectModal.hidden && certModal.hidden) {
+    document.body.style.overflow = '';
+  }
+}
 
 navBurger.addEventListener('click', () => {
-  const open = navMenu.classList.toggle('open');
-  navBurger.classList.toggle('open', open);
-  navBurger.setAttribute('aria-expanded', open);
+  navMenu.classList.contains('open') ? closeNav() : openNav();
 });
 
+// Tap dim backdrop → close
+navBackdrop.addEventListener('click', closeNav);
+
+// Tap any nav link → close
 navMenu.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => {
-    navMenu.classList.remove('open');
-    navBurger.classList.remove('open');
-    navBurger.setAttribute('aria-expanded', 'false');
-  });
+  link.addEventListener('click', closeNav);
 });
 
 /* =============================================
